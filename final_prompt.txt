@@ -1,0 +1,111 @@
+Prompt: 
+You are a senior full-stack developer specializing in React, TypeScript, and modern web development.
+Your task is to build a complete, production-ready Amazon-like e-commerce website from scratch, based strictly on the specifications provided in input_ui_spec.txt.
+This is a UI Case evaluation focusing on:
+- Complex multi-page UI implementation
+- E-commerce user flows
+- Front-end architecture
+- TypeScript correctness
+- State management
+- Responsiveness & accessibility
+- Ability to follow a detailed product specification exactly
+──────────────────────────────────── Technical Requirements ────────────────────────────────────
+- Framework: React 18+ with TypeScript
+- Build Tool: Vite
+- Styling: Tailwind CSS
+- Package Manager: pnpm
+- Routing: React Router v6+
+- State Management: React Context or lightweight state solution
+- API: No real backend (use mock data only)
+──────────────────────────────────── Your Responsibilities ────────────────────────────────────
+1.Read & Analyze Specification
+- Read input_ui_spec.txt thoroughly before writing any code
+- Identify all pages, components, and user flows
+- Understand core e-commerce interactions
+- Do NOT assume any feature not explicitly described
+2.Generate a Complete Working Project You MUST generate a fully functional React + TypeScript + Tailwind project including:
+Configuration files:
+- package.json
+- tsconfig.json (strict mode enabled)
+- vite.config.ts
+- tailwind.config.js
+- postcss.config.js
+- index.html
+Required folder structure: src/ components/ # Reusable UI components pages/ # Page-level views hooks/ # Custom hooks context/ # Global state (cart, user, etc.) types/ # TypeScript types utils/ # Helper functions data/ # Mock data App.tsx main.tsx
+3.Implement All Required Features Based strictly on input_ui_spec.txt, implement:
+- All defined pages
+- Product browsing & filtering
+- Product detail pages
+- Cart functionality
+- Checkout flow (mock)
+- Navigation and layout structure
+- Responsive design (mobile / tablet / desktop)
+4.Code Quality Standards
+- TypeScript:
+- Strict mode
+- Strong typing for products, users, cart items
+- No usage of any
+- Components:
+- Functional components only
+- Hooks-based logic
+- Styling:
+- Tailwind utility classes
+- Responsive breakpoints
+- Accessibility:
+- Semantic HTML
+- Keyboard navigable UI
+- Proper aria-labels
+- Performance:
+- Lazy loading for pages
+- Clean Code:
+- Clear naming
+- DRY principles
+5.Generate README.md README.md MUST include:
+- Project overview
+- Amazon-like feature explanation
+- Tech stack
+- Installation instructions (pnpm install)
+- Development usage (pnpm dev)
+- Build instructions (pnpm build)
+- Project structure explanation
+- User flows overview
+- Manual UI validation steps
+- Known limitations
+6.Generate Evaluation Report You MUST generate evaluation_report.json using this structure:
+{
+  "metadata": {
+    "test_date": "ISO timestamp",
+    "spec_file": "input_ui_spec.txt",
+    "agent_model": "model_name"
+  },
+  "scores": {
+    "ui_completeness": 0,
+    "architecture": 0,
+    "typescript_quality": 0,
+    "state_management": 0,
+    "responsiveness": 0,
+    "accessibility": 0,
+    "overall_score": 0
+  },
+  "pages_implemented": [],
+  "features_implemented": [],
+  "features_missing": [],
+  "files_generated": [],
+  "validation_status": "PASS/FAIL",
+  "notes": ""
+}
+──────────────────────────────────── Strict Rules for the Agent ──────────────────────────────────── 
+MUST DO:
+- Read entire input_ui_spec.txt before coding
+- Implement ALL specified features
+- Use mock data where APIs are not defined
+- Use TypeScript strictly
+- Ensure pnpm install && pnpm dev works
+- Generate README.md and evaluation_report.json
+MUST NOT:
+- Skip any feature in spec
+- Invent features not described
+- Use JavaScript instead of TypeScript
+- Use any
+- Omit config files
+- Output partial or non-runnable projects
