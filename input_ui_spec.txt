@@ -1,0 +1,108 @@
+Amazon-like E-commerce Website UI Specification
+
+1. Global Layout
+- Header (sticky):
+  - Logo (left)
+  - Search bar (center)
+  - Cart icon with item count (right)
+- Footer:
+  - Links: About, Help, Privacy
+  - Copyright text
+
+2. Pages
+
+2.1 Home Page (/)
+- Hero banner
+- Featured product sections:
+  - Electronics
+  - Books
+  - Fashion
+- Each section shows:
+  - Product image
+  - Product title
+  - Price
+  - Rating (1–5 stars)
+  - "View Product" button
+
+2.2 Product Listing Page (/products)
+- Grid layout
+- Filters:
+  - Category (dropdown)
+  - Price range (min / max)
+- Sorting:
+  - Price: Low to High
+  - Price: High to Low
+- Each product card includes:
+  - Image
+  - Title
+  - Price
+  - Rating
+  - Add to Cart button
+
+2.3 Product Detail Page (/products/:id)
+- Product images
+- Title
+- Price
+- Rating
+- Description
+- Quantity selector
+- Add to Cart button
+
+2.4 Cart Page (/cart)
+- List of added items:
+  - Image
+  - Title
+  - Price
+  - Quantity controls (+ / -)
+  - Remove button
+- Cart summary:
+  - Subtotal
+  - Proceed to Checkout button
+
+2.5 Checkout Page (/checkout)
+- Mock checkout form:
+  - Full name
+  - Address
+  - Email
+  - Payment method (select: Credit Card / PayPal)
+- Place Order button
+- No real payment integration
+
+3. State Management
+- Global cart state:
+  - Add item
+  - Remove item
+  - Update quantity
+- Cart state must persist during session (no localStorage required)
+
+4. Data
+- Use mock product data only
+- Product fields:
+  - id
+  - title
+  - category
+  - price
+  - rating
+  - description
+  - image
+
+5. Responsiveness
+- Mobile-first design
+- Grid adjusts for:
+  - Mobile
+  - Tablet
+  - Desktop
+
+6. Accessibility
+- Keyboard navigation for:
+  - Forms
+  - Buttons
+- aria-labels for:
+  - Cart actions
+  - Search input
+
+7. Non-Goals (Must NOT implement)
+- User authentication
+- Real payment
+- Backend APIs
+- Order history
